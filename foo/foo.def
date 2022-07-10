@@ -1,0 +1,2 @@
+LIBRARY foobar
+EXPORTS foobar

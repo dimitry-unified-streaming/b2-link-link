@@ -1,0 +1,33 @@
+import os ;
+
+if [ os.name ] = NT
+{
+  lib advapi32 ;
+}
+else
+{
+  alias advapi32 ;
+}
+
+project foo
+  : requirements
+    <include>.
+    <include>../bar
+  : source-location .
+  : usage-requirements <include>.
+  ;
+
+lib foo
+  : foo.cpp
+    version.rc
+    ../bar//bar/<link>static
+  : <link>shared
+    <def-file>foo.def
+    <toolset>msvc:<library>advapi32
+  ;
+
+install stage
+  : foo
+  : <address-model>64,<variant>debug:<location>bin64/debug
+    <address-model>64,<variant>release:<location>bin64/release
+  ;

@@ -1,0 +1,8 @@
+project link-link
+  : requirements
+
+    # generate .pdb's for release builds
+    <toolset>msvc:<debug-symbols>on
+
+  : default-build release <address-model>64
+  ;
