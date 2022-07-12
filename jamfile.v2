@@ -1,0 +1,8 @@
+lib bar
+  : bar.cpp
+  ;
+
+lib foo
+  : foo.cpp
+    bar
+  ;
