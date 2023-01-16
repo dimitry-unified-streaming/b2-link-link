@@ -12,14 +12,13 @@ else
 project foo
   : requirements
     <include>.
-    <include>../bar
+    <include>blurp
   : source-location .
   : usage-requirements <include>.
   ;
 
 lib foo
   : foo.cpp
-    version.rc
     ../bar//bar/<link>static
   : <link>shared
     <def-file>foo.def

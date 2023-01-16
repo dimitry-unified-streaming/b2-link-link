@@ -1,22 +1,3 @@
-import os ;
-
-if [ os.name ] = NT
-{
-  alias dl ;
-  alias uuid ;
-
-  lib rpcrt4 ;
-  lib ws2_32 ;
-}
-else
-{
-  lib dl ;
-  lib uuid ;
-
-  alias rpcrt4 ;
-  alias ws2_32 ;
-}
-
 project bar
   : requirements
     <include>.
@@ -160,11 +141,10 @@ lib bar
     file-132.cpp
     file-133.cpp
     file-134.cpp
-    dl
-    rpcrt4 
-    uuid
-    ws2_32
-  : <toolset>msvc:<source>getopt_long.c
-    <define>BUILDING_BAR
-    <link>shared
+    file-135.cpp
+    file-136.cpp
+    file-137.cpp
+    file-138.cpp
+    file-139.cpp
+  : <link>shared
   ;

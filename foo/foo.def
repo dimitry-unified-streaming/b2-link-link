@@ -1,2 +1,2 @@
-LIBRARY foobar
+LIBRARY foo
 EXPORTS foobar
