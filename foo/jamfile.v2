@@ -19,7 +19,7 @@ project foo
 
 lib foo
   : foo.cpp
-    ../bar//bar/<link>static
+    ../bar//bar
   : <link>shared
     <def-file>foo.def
     <toolset>msvc:<library>advapi32

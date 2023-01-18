@@ -146,5 +146,6 @@ lib bar
     file-137.cpp
     file-138.cpp
     file-139.cpp
+    file-140.cpp
   : <link>shared
   ;

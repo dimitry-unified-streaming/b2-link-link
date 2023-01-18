@@ -17,7 +17,6 @@ lib bar
   : <link>shared
   ;
 __EOT__
-  unix2dos bar/jamfile.v2
 
   rm -rf bin foo/bin bar/bin
 
